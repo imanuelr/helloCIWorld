@@ -1,5 +1,5 @@
 #!/bin/bash
 
 export TERM=${TERM:-dumb}
-cd source-repo
+cd app-repository
 ./gradlew --no-daemon build
