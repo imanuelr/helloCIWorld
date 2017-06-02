@@ -1,20 +1,15 @@
 #!/bin/bash
 
 set -x
-
 export TERM=${TERM:-dumb}
 
-ls -la
-
-cd app-repository
-chmod +x gradlew
-
-./gradlew --no-daemon build
-cd build/
-ls -la
-
-cd ../..
+chmod +x app-repository/gradlew
+./app-repository/gradlew --no-daemon build
 
 git clone resource-share updated-gist
+rm -rf updated-gist/build
+cp -a app-repository/build updated-gist
 
-ls -la
+cd updated-gist
+git add .
+git commit -m "Push new artifacts"
