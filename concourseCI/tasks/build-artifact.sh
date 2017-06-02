@@ -3,11 +3,13 @@
 set -x
 export TERM=${TERM:-dumb}
 
-chmod +x app-repository/gradlew
-./app-repository/gradlew --no-daemon build
+cd app-repository
+chmod +x gradlew
+./gradlew --no-daemon build
 
-ls -la app-repository
-ls -la app-repository/build
+ls -la
+ls -la build
+cd ..
 
 git clone resource-share updated-gist
 rm -rf updated-gist/build
