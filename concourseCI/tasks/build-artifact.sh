@@ -22,3 +22,4 @@ git config --global user.name "Concourse"
 
 git add .
 git commit -m "Push new artifacts"
+git push
