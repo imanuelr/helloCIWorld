@@ -1,6 +1,13 @@
+resources:
+- name: task-repository
+  type: git
+  source:
+    uri: https://github.com/imanuelr/helloCIWorld.git
+
 jobs:
 - name: hello-world
   public: true
   plan:
+  - get: task-repository
   - task: say-hello
-    file: tasks/task_say_hello.yaml
+    file: concourseCI/tasks/task_say_hello.yaml
