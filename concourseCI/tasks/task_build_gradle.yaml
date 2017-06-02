@@ -9,4 +9,5 @@ inputs:
   - name: app-repository
 
 run:
-  path: app-repository/concourseCI/tasks/build-artifact.sh
+  path: sh
+  args: ["app-repository/concourseCI/tasks/build-artifact.sh"]
