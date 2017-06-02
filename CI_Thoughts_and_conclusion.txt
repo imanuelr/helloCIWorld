@@ -1,0 +1,61 @@
+ConcourseCI
++ Full setup available in Docker -> tryout mode in prebuilt Vagrant
++ Configurable via yaml files, very readable
++ Clean, concise UI
++ Reusable tasks, jobs, resources.. easy to define them in seperate yaml files
+- Requires some tutorials to understand all the concepts (tasks, resources, workers, controllers,...)
+
+Conclusion: Will try to build a more complex actual pipeline with this.
+
+What is the tool for exactly (CI? CD? both? ...?) => Both
+How hard was the setup? => really easy, containerized system (in Docker I had issues with key pairs in windows)
+How clean is the interface? => Neat, concise, easy overview. Even for very big pipelines
+How flexible is the tool? => Haven't gone deep enough into the tool to answer this
+How does it visualise build pipelines (if present)? => pipelines are connected based on the way tasks and jobs are connected in the yaml files. Pipelines are native to Concourse
+How much of the configuration can be versioned as code? => everything! All pipelines, tasks, controllers, jobs, etc.. are built via yaml files. When you update these files you can use the fly CLI command set to reconfigure existing pipelines
+
+----------------------------------------------------
+
+LambdaCD
++ configurable as code
++ Uses a format that is compatible with CCMenu, BuildNotify, Nevergreen, ..
+- Doesnt look as pretty
+- Closure as config -> also requires leiningen as CLI tool
+
+--> technical difficulties in setting up leiningen on windows. Dropping lambdaCD after timebox passed.
+Conclusion: Might check it out, but the clojure language is making me hesitant.
+
+What is the tool for exactly (CI? CD? both? ...?) => Both
+How hard was the setup?
+How clean is the interface?
+How flexible is the tool?
+How does it visualise build pipelines (if present)?
+How much of the configuration can be versioned as code?
+
+----------------------------------------------------
+
+Spinnaker
+
+What is the tool for exactly (CI? CD? both? ...?) => CD. It exposes endpoints in its pipelines for other CI tools to make use of.
+How hard was the setup?
+How clean is the interface?
+How flexible is the tool?
+How does it visualise build pipelines (if present)?
+How much of the configuration can be versioned as code?
+
+----------------------------------------------------
+
+Drone
+
+What is the tool for exactly (CI? CD? both? ...?) => CD, kind of CI.. -> Build steps are commands (aliases) that translate to shell scripts
+How hard was the setup?
+How clean is the interface? It is clean and modern. But does not give an easy pipeline overview
+How flexible is the tool?
+How does it visualise build pipelines (if present)?
+How much of the configuration can be versioned as code?
+
+----------------------------------------------------
+
+GoCD
+ Configuration as code is not native, but a lot of plugins exist.
+ e.g. json and yaml are very good options here: https://docs.gocd.org/current/advanced_usage/pipelines_as_code.html

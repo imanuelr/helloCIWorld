@@ -1,0 +1,6 @@
+jobs:
+- name: hello-world
+  public: true
+  plan:
+  - task: say-hello
+    file: tasks/task_say_hello.yaml
