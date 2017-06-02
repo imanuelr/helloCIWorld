@@ -19,3 +19,5 @@ jobs:
   - get: task-repository
   - task: say-hello
     file: task-repository/concourseCI/tasks/task_say_hello.yaml
+  - task: Build gradle project
+    file: task-repository/concourseCI/tasks/task_build_gradle.yaml

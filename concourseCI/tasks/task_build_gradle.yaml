@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: gradle, tag: jdk8}
+
+inputs:
+  - name: source-repo
+
+run:
+  path: source-repo/concourseCI/tasks/build-artifact.sh
