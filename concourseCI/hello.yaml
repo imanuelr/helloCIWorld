@@ -9,15 +9,45 @@ resources:
   source:
     uri: https://github.com/imanuelr/helloCIWorld.git
 
+- name: resource-share
+  type: git
+  source:
+    branch: master
+    uri: https://gist.github.com/38626345c9f6870dd0db1ba94257a7bd.git
+
+
 jobs:
-- name: hello-world
+- name: build-gradle
   public: true
   serial: true
   plan:
   - get: app-repository
     trigger: true
+  - get: resource-share
   - get: task-repository
-  - task: say-hello
-    file: task-repository/concourseCI/tasks/task_say_hello.yaml
   - task: Build gradle project
     file: task-repository/concourseCI/tasks/task_build_gradle.yaml
+  - put: resource-share
+    params: {repository: updated-gist}
+
+- name: integration-tests
+  public: true
+  serial: true
+  plan:
+  - get: resource-share
+    passed: [build-gradle]
+    trigger: true
+  - get: task-repository
+  - task: Run integration tests
+    file: task-repository/concourseCI/tasks/task_integration_tests.yaml
+
+- name: deploy-to-test-env
+  public: true
+  serial: true
+  plan:
+  - get: resource-share
+    passed: [integration-tests]
+    trigger: true
+  - get: task-repository
+  - task: Deploy build to test environment
+    file: task-repository/concourseCI/tasks/task_deploy_to_testenv.yaml

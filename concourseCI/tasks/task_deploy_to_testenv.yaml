@@ -5,4 +5,4 @@ image_resource:
   source: {repository: ubuntu}
 run:
   path: echo
-  args: ["Hello, world!"]
+  args: ["Deploying artifacts to test env!"]

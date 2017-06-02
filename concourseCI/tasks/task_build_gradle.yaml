@@ -3,10 +3,14 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: java, tag: openjdk-8}
+  source: {repository: ismailchaida/java-git}
 
 inputs:
   - name: app-repository
+  - name: resource-share
+
+outputs:
+  - name: updated-gist
 
 run:
   path: sh
