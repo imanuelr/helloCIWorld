@@ -13,7 +13,35 @@ resources:
   type: git
   source:
     branch: master
-    uri: https://gist.github.com/38626345c9f6870dd0db1ba94257a7bd.git
+    uri: git@gist.github.com:38626345c9f6870dd0db1ba94257a7bd.git
+    private_key: |
+    -----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAo4qaLX2Zi+lPs5XrNoSJDhsPbgUqdA/ylpg/Hsz489mlQCOo
+xhavzNzYB+g0Mj72Oo4h1Jdx5o7O7wkEWQMk2AE6iDbtE/fEVu/DyZ3WvjzCrq2t
+m22TW6pPiOVBATIcDJA1c9op2nj55go5R5w5ybYKH7HToyToc1XgU+9frKWOfRBK
++oZdLSpj4Idzg+vaQyFagrqQrtnq/UWpYKe+7m5+/djmIFaz7XL3kJY+i+2A+uB+
+y/gnmmYaYkM8iAZLIrkXUxReyhWeVOvrpEpCldoy4OkVlVLiq3LZQSUzTFcJhQ+R
+iQGkbTgzFvdVzRIsE8O9OnQtULBhK4n/hvezcQIDAQABAoIBACe3hXH+ysd7xetr
+QVBgJ5jRYZHql0DQjq2cE9g7F0rBVKya/GX/JHqwN5bUAbkiKVJXKkgi73p6vC65
+FeE4Lj53LeveyvzKc1hZqkbQmlJhFzas3zicB+l/Fwm8A2ly7fTvIMwd84QnVSlU
+2kxV2ILwPs0rtqYsVHeOJ4i63ZVjzBBwWN/Po43sQhigs30iltLruD8xFZy0ntzV
+wqnCcNeco0CabOlgSurDql1TjeM2Q+LJFOCeCfG/6EY1S8SmjCjr8/hv/OLpgfaO
+oKkTwvCgYs+dJGljP8Yd4b5VjcJYI3lERF0tFemL9SRxUrABQXv2J774kMe2OQYX
+b/GUF0ECgYEA1ymtoSlt4Qxlh9S7WbR0fbUmpnWvq24PN4rJWjQd2DmzAW/Zed5f
+62D1jE5s1MS5/oFH5GCRKG3kq8HoDtZKTIINchmGj8/8EU0pbj8e4FejtwIoxfdO
+NC62pAVf6CS8QDyjszG98QcxJWox6yIP9w6J6HTXRWnJ3l1gPHkDXHUCgYEAwpS+
+94jFkE4Q15ev2stQsfiLzGNcyNnxslR+gTyKgLKV3wGma1wxxsMzJ7AVi6O/pt+O
+UIhOs0I405pIfR6/5/1AL93PFw2OPtvfMnJJn0sXWnqT+1vBfoicbWWZ/iTfNmCN
+XL3LqUFTL6OH/PNjuB8H+VysSV6FOG0BdCj5y40CgYA2mqUt2U3BZ1v89Mf3JAzM
+OkTsycEjSHMkLVycP82zKjF7k98lRoIhQiIO0XhdJu/s3vJXywoLsJfv3u39lfSV
+JgwzgLbdmHLoESUKjYpQdO1fbHTciL6YD6LaTWLhjzEXPExvFZiWqrSWQjUY7zQO
+BuqIy942B3rrq9bYgf2QYQKBgBrnwngr21WW1dFZ0iEo1+GkAoCihKPpLvh/onZw
+Tp55Eywg6EgUGXXoa9xjBremTsveQal1D5zN3Vm1DazvYY3MgOGdhBMl9rNOZ9Br
+6S4zjeke5fNtvpWmgirGT8LKimrUcveN7uladQwzSox5gyJkeA/M9q22eilROVA8
+kj3JAoGAe8Ip9TrLo8PgQYZJoPD5gA5jLF2OXI2KrO1fnTYguCZx8ppmd47PzJYZ
+KDCRPD+rTFshZYKmfs0/DqIZxcy1y7UYMfGSWGnLzZUodHzLWLuFpfD2lceZN//L
+d/w+4o2EplSZc+JD4T6T0uQgIpHJWHA/UidboT9byQVaXSWK1nM=
+-----END RSA PRIVATE KEY-----
 
 
 jobs:
