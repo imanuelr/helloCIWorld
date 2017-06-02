@@ -4,10 +4,18 @@ resources:
   source:
     uri: https://github.com/imanuelr/helloCIWorld.git
 
+- name: app-repository
+  type: git
+  source:
+    uri: https://github.com/imanuelr/helloCIWorld.git
+
 jobs:
 - name: hello-world
   public: true
+  serial: true
   plan:
+  - get: app-repository
+    trigger: true
   - get: task-repository
   - task: say-hello
-    file: concourseCI/tasks/task_say_hello.yaml
+    file: task-repository/concourseCI/tasks/task_say_hello.yaml
