@@ -57,5 +57,6 @@ How much of the configuration can be versioned as code?
 ----------------------------------------------------
 
 GoCD
- Configuration as code is not native, but a lot of plugins exist.
+ Configuration as code is not native (it actually is in xml, but xml doesnt count..), but plugins exist.
  e.g. json and yaml are very good options here: https://docs.gocd.org/current/advanced_usage/pipelines_as_code.html
+ --> Params and Templates are not supported in these plugins
